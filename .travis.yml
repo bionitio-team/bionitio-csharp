@@ -7,6 +7,6 @@ dotnet: 2.0.0
 
 script:
   - dotnet publish --runtime linux-x64
-  - ./functional_tests/test.sh ~/.cargo/bin/bionitio-rs
+  - ./functional_tests/test.sh csharp/bionitio/bin/Debug/netcoreapp2.0/linux-x64/publish/bionitio
   - ./.travis/unit-test.sh
 
