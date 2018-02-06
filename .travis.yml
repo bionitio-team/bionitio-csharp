@@ -10,6 +10,6 @@ script:
   - dotnet publish --runtime linux-x64 
 
   # Test
-  - ./functional_tests/bionitio-test.sh -p bionitio/bin/Debug/netcoreapp2.0/linux-x64/publish/bionitio -d functional_tests/test_data
+  - ./functional_tests/bionitio-test.sh -p $TRAVIS_BUILD_DIR/bionitio/bin/Debug/netcoreapp2.0/linux-x64/publish/bionitio -d functional_tests/test_data
   - ./.travis/unit-test.sh
 
