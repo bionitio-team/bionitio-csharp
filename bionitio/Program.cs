@@ -50,7 +50,7 @@ namespace bionitio
                     if (fastas.Values.Count == 0)
                     {
                         logger.Information("Processing FASTA file from stdin");
-                        var stats = FastaStats.Calculate(Console.OpenStandardInput(), length, "STDIN");
+                        var stats = FastaStats.Calculate(Console.OpenStandardInput(), length, "stdin");
                         Console.WriteLine(stats);
                     }
                     else
