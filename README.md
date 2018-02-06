@@ -14,6 +14,19 @@ This program is released as open source software under the terms of [MIT License
 
 # Installing
 
+* Install the [DotNet SDK](https://www.microsoft.com/net/learn/get-started/)
+* `cd $BIONITIO_CODE/bionitio`
+
+## Build an executable on OS X, and then run
+
+* `dotnet publish -c Release --runtime osx-x64 --self-contained`
+* `./bin/Release/netcoreapp2.0/osx-x64/bionitio -h`
+
+## Build an executable on Linux, and then run
+
+* `dotnet publish -c Release --runtime linux-x64`
+* `./bin/Release/netcoreapp2.0/linux-x64/bionitio -h`
+
 
 # General behaviour
 
@@ -41,16 +54,15 @@ In the examples below, `%` indicates the command line prompt.
 
 Bionitio can display usage information on the command line via the `-h` or `--help` argument:
 ```
-% bionitio-csharp -h
-Usage: bionitio-csharp [--minlen N] [--version] [--log LOG_FILE] [[FASTA_FILE ...]]
-  Print fasta stats
+Usage: bionitio [arguments] [options]
 
-Available options:
-  -h,--help                Show this help text
-  --minlen N               Minimum length sequence to include in stats
-                           (default=0)
-  --version                Print version and exit
-  --log LOG_FILE           Write progress to LOG_FILE
+Arguments:
+  fastqs  Input FASTA files
+
+Options:
+  -?|-h|--help  Show help information
+  --minlen      Minimum length sequence to include in stats (default 0)
+  --log         record program progress in LOG_FILE
 ```
 
 ## Reading FASTA files named on the command line
