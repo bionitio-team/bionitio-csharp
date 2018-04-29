@@ -10,6 +10,16 @@ This program is released as open source software under the terms of [MIT License
 
 # Installing
 
+Clone this repository: 
+```
+git clone https://github.com/bionitio-team/bionitio-csharp
+```
+
+Move into the repository directory:
+```
+cd bionitio-csharp
+```
+
 * Install the [DotNet SDK](https://www.microsoft.com/net/learn/get-started/)
 * `cd $BIONITIO_CODE/bionitio`
 
