@@ -1,4 +1,14 @@
-﻿using System;
+﻿/*
+File:       : FastaStats.cs 
+Description : Read a FASTA file and compute statistics about its contents
+Copyright   : (c) BIONITIO_AUTHOR, BIONITIO_DATE  
+License     : BIONITIO_LICENSE 
+Maintainer  : BIONITIO_EMAIL 
+Stability   : stable
+Portability : POSIX
+*/
+
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;

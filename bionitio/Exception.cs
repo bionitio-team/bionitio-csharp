@@ -1,4 +1,14 @@
-﻿using System;
+﻿/*
+File:       : Exception.cs 
+Description : Exception handling 
+Copyright   : (c) BIONITIO_AUTHOR, BIONITIO_DATE  
+License     : BIONITIO_LICENSE 
+Maintainer  : BIONITIO_EMAIL 
+Stability   : stable
+Portability : POSIX
+*/
+
+using System;
 
 namespace bionitio
 {

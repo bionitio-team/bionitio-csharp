@@ -1,4 +1,20 @@
-﻿using System;
+﻿/*
+File:       : Program.cs 
+Description : The main entry point for the program.
+Copyright   : (c) BIONITIO_AUTHOR, BIONITIO_DATE  
+License     : BIONITIO_LICENSE 
+Maintainer  : BIONITIO_EMAIL 
+Stability   : stable
+Portability : POSIX
+
+This module orchestrates the overall behaviour of the program. The main
+parts are:
+ * Parse command line arguments.
+ * Process each FASTA file in sequence.
+ * Pretty print output.
+*/
+
+using System;
 using Bio.Util;
 using Serilog;
 using Microsoft.Extensions.CommandLineUtils;
