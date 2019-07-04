@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/dotnet/core/sdk:2.0.0
+FROM mcr.microsoft.com/dotnet/core/sdk:2.0
 WORKDIR /bionitio
 COPY . .
 
