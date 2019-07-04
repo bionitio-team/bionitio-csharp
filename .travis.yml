@@ -1,15 +1,16 @@
-dist: trusty
+sudo: true
+dist: xenial
+services:
+  - docker
+language: python
+python:
+  - "3.4"
 
-language: csharp
-solution: csharp.sln
-mono: none
-dotnet: 2.0.0
+before_install:
+  #  - pip3 install cwltool
+  - docker build -t bionitio-csharp .
 
 script:
-  # Compile
-  - dotnet publish --runtime linux-x64 
-
-  # Test
-  - ./functional_tests/bionitio-test.sh -p $TRAVIS_BUILD_DIR/bionitio/bin/Debug/netcoreapp2.0/linux-x64/publish/bionitio -d functional_tests/test_data
-  - ./.travis/unit-test.sh
-
+  - docker run --entrypoint /bionitio/.travis/unit-test.sh bionitio-sharp
+  - docker run --entrypoint /bionitio/functional_tests/bionitio-test.sh bionitio-csharp -p bionitio -d /bionitio/functional_tests/test_data -v
+  # - cwltool bionitio.cwl --fasta_file functional_tests/test_data/two_sequence.fasta
