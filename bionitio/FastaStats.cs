@@ -87,7 +87,7 @@ namespace bionitio
             FileStream fileStream;
             try
             {
-                fileStream = new FileStream(filename, FileMode.Open);
+                fileStream = new FileStream(filename, FileMode.Open, FileAccess.Read);
             }
             catch (Exception e)
             {
