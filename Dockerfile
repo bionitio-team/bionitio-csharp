@@ -1,8 +1,6 @@
 FROM mcr.microsoft.com/dotnet/core/sdk:2.2
 WORKDIR /bionitio
 
-# Dotnet runtime dependency
-RUN apt-get update && apt-get install libunwind8
 COPY . ./
 
 # This is *not* self-contained, because that means copying the entire runtime to the output directory,
